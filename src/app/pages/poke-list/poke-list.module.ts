@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { PokeListPageRoutingModule } from './poke-list-routing.module';
 
 import { PokeListPage } from './poke-list.page';
-import { SharedModule } from 'src/app/components/shared/shared.module';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { SharedModule } from 'src/app/components/shared/shared.module';
     FormsModule,
     IonicModule,
     PokeListPageRoutingModule,
-    SharedModule
   ],
   declarations: [PokeListPage]
 })

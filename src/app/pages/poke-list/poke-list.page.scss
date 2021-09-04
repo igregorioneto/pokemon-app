@@ -1,0 +1,38 @@
+ion-content {
+  display: flex;
+  ion-title {
+    margin: 30px 20px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  ion-card {
+    margin: 10px 0 20px 15px;
+    width: 180px;
+    height: 150px;
+    display: inline-block;
+    ion-card-header {
+
+      ion-card-title {
+        // margin: 20px 0 5px 10px;
+        padding: 20px 0 5px 10px;
+        font-size: 1.2em;
+      }
+
+    }
+
+    ion-card-content {
+      // margin: 5px 15px 0 15px;
+      padding: 0 15px 0 15px;
+      font-size: 1em;
+
+      span {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+  }
+
+  
+}

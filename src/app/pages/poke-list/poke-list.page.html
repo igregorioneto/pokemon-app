@@ -1,1 +1,16 @@
-<app-poke-card></app-poke-card>
+<ion-content>
+
+  <ion-title>Pokedex</ion-title>
+
+  <ion-card *ngFor="let poke of data">
+    <ion-card-header>
+      <ion-card-title>{{poke.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <span>Fogo</span>
+      <span>Fogo</span>
+      <ion-img></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

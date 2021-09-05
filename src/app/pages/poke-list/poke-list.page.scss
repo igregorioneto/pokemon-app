@@ -25,10 +25,16 @@ ion-content {
       // margin: 5px 15px 0 15px;
       padding: 0 15px 0 15px;
       font-size: 1em;
+      display: flex;
 
-      span {
+      div span {
         display: block;
         margin: 10px 0;
+      }
+
+      ion-img {
+        margin: 0 10px;
+        width: 100px;
       }
     }
 

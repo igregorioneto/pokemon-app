@@ -2,14 +2,17 @@
 
   <ion-title>Pokedex</ion-title>
 
-  <ion-card *ngFor="let poke of data">
+  <ion-card *ngFor="let poke of data;let i = index;">
     <ion-card-header>
       <ion-card-title>{{poke.name}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <span>Fogo</span>
-      <span>Fogo</span>
-      <ion-img></ion-img>
+      <div>
+        <span>Fogo</span>
+        <span>Fogo</span>
+      </div>
+      <ion-img [src]="dataCharacterPoke.sort()[i]">
+      </ion-img>
     </ion-card-content>
   </ion-card>
 

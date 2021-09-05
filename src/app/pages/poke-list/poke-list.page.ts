@@ -8,6 +8,8 @@ import { PokeService } from 'src/app/services/poke.service';
 })
 export class PokeListPage implements OnInit {
   public data: any[] = [];
+  public dataCharacterPoke: any[] = [];
+
   constructor(
     private pokeService: PokeService
   ) { }
@@ -15,8 +17,18 @@ export class PokeListPage implements OnInit {
   ngOnInit() {
     this.pokeService.listPokemons()
     .subscribe(poke => {
-      console.log(poke.results);
       this.data = poke.results;
+      this.data.forEach(pokemon => {
+        this.getPokemon(pokemon.name);
+      });
+    });
+  }
+
+  getPokemon(name: string) {
+    this.pokeService.getPokemonName(name)
+    .subscribe(poke => {
+      this.dataCharacterPoke.push(poke.sprites.other.dream_world.front_default);
+      console.log(this.dataCharacterPoke.sort());
     });
   }
 

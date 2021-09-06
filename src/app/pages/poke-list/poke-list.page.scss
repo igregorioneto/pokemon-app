@@ -32,8 +32,9 @@ ion-content {
         margin: 10px 0;
       }
 
-      ion-img {
-        margin: 0 10px;
+      div ion-img {
+        margin: 0 0 10px 10px;
+        line-height: 10px;
         width: 100px;
       }
     }

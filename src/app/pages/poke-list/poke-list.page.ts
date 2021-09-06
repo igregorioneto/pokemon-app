@@ -27,8 +27,8 @@ export class PokeListPage implements OnInit {
   getPokemon(name: string) {
     this.pokeService.getPokemonName(name)
     .subscribe(poke => {
-      this.dataCharacterPoke.push(poke.sprites.other.dream_world.front_default);
-      console.log(this.dataCharacterPoke.sort());
+      console.log(poke);
+      this.dataCharacterPoke.push(poke);
     });
   }
 

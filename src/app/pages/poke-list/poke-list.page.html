@@ -2,17 +2,27 @@
 
   <ion-title>Pokedex</ion-title>
 
-  <ion-card *ngFor="let poke of data;let i = index;">
+  <ion-card *ngFor="let poke of data;let i = index;" routerLink="/poke-detail/{{i+1}}">
     <ion-card-header>
-      <ion-card-title>{{poke.name}}</ion-card-title>
+      <ion-card-title>{{poke.name|titlecase}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <div>
-        <span>Fogo</span>
-        <span>Fogo</span>
+
+      <div *ngFor="let pokeID of dataCharacterPoke">
+        <span *ngIf="pokeID.types[0]">
+          {{ poke.name === pokeID.name ? (pokeID.types[0].type.name|titlecase) : ''}}
+        </span>
+        <span *ngIf="pokeID.types[1]">
+          {{ poke.name === pokeID.name ? (pokeID.types[1].type.name|titlecase) : ''}}
+        </span>
       </div>
-      <ion-img [src]="dataCharacterPoke.sort()[i]">
-      </ion-img>
+
+      <div *ngFor="let pokeID of dataCharacterPoke">
+        <ion-img *ngIf="poke.name === pokeID.name"
+          [src]="pokeID.sprites.front_default ? pokeID.sprites.front_default : 'SEM IMAGEM'">
+        </ion-img>
+      </div>
+
     </ion-card-content>
   </ion-card>
 

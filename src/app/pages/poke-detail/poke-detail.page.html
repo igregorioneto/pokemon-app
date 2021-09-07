@@ -1,9 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>poke-detail</ion-title>
+    <ion-title>
+      <ion-icon routerLink="/" name="arrow-back-outline"></ion-icon>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item lines="none">
+    <ion-title class="title">{{name | titlecase}}</ion-title>
+    <ion-title class="subtitle">#{{id}}</ion-title>
+  </ion-item>
+
+  <ion-item lines="none" *ngFor="let item of types">
+    <span>{{item.type.name | titlecase}}</span>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-img [src]="img"></ion-img>
+  </ion-item>
+
+  <ion-item class="Information" lines="none">
+
+  </ion-item>
 
 </ion-content>

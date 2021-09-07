@@ -27,7 +27,6 @@ export class PokeListPage implements OnInit {
   getPokemon(name: string) {
     this.pokeService.getPokemonName(name)
     .subscribe(poke => {
-      console.log(poke);
       this.dataCharacterPoke.push(poke);
     });
   }

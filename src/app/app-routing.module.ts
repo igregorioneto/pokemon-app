@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/poke-list/poke-list.module').then( m => m.PokeListPageModule)
   },
   {
-    path: 'poke-detail/:podeID',
+    path: 'poke-detail/:pokeID',
     loadChildren: () => import('./pages/poke-detail/poke-detail.module').then( m => m.PokeDetailPageModule)
   },
 ];

@@ -17,4 +17,8 @@ export class PokeService {
   public getPokemonName(name: string): Observable<any>{
     return this.http.get<any>(`${this.baseURL}/${name}`);
   }
+
+  public getPokemonID(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseURL}/${id}`);
+  }
 }
